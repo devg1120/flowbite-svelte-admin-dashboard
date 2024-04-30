@@ -135,16 +135,20 @@
 
 	     toggleSidebarEl.addEventListener('click', function() {
   
-                    console.log('クリックされました！');
+                    //console.log('クリックされました！', sidebar.style.display);
 		    if (sidebar.classList.contains('w-64')) {
+		    //if (sidebar.style.display === "block" || sidebar.style.display === "") {
                           sidebar.classList.remove('w-64');
-                          sidebar.classList.add('w-4');
+                          sidebar.classList.add('w-0');
+                          sidebar.style.display = "none";
                           main.classList.remove('lg:ml-64');
-                          main.classList.add('lg:ml-4');
-		    } else if (sidebar.classList.contains('w-4')) {
-                          sidebar.classList.remove('w-4');
+                          main.classList.add('lg:ml-0');
+		    } else if (sidebar.classList.contains('w-0')) {
+		    //} else if (sidebar.style.display === "none") {
+                          sidebar.classList.remove('w-0');
                           sidebar.classList.add('w-64');
-                          main.classList.remove('lg:ml-4');
+                          sidebar.style.display = "block";
+                          main.classList.remove('lg:ml-0');
                           main.classList.add('lg:ml-64');
 
 		    }
