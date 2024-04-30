@@ -1,0 +1,38 @@
+
+
+src/routes/(sidebar)
+   Sidebar.svelte
+
+-----
+
+nMount(async () => {
+             const sidebar: HTMLElement = document.getElementById( 'sidebar' )!;
+             const main: HTMLElement = document.getElementById( 'main-panel' )!;
+             const toggleSidebarEl: HTMLElement = document.getElementById("toggleSidebar")!; 
+
+             toggleSidebarEl.addEventListener('click', function() {
+
+                    console.log('クリックされました！');
+                    if (sidebar.classList.contains('w-64')) {
+                          sidebar.classList.remove('w-64');
+                          sidebar.classList.add('w-0');
+                          main.classList.remove('lg:ml-64');
+                          main.classList.add('lg:ml-0');
+                    } else if (sidebar.classList.contains('w-0')) {
+                          sidebar.classList.remove('w-0');
+                          sidebar.classList.add('w-64');
+                          main.classList.remove('lg:ml-0');
+                          main.classList.add('lg:ml-64');
+
+                    }
+
+
+             }, false);
+
+        });
+----
+                                #  px-3 => px-2
+        <SidebarWrapper
+                divClass="overflow-y-auto px-2 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
+        >
+

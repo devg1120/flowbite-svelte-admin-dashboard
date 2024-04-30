@@ -138,13 +138,13 @@
                     console.log('クリックされました！');
 		    if (sidebar.classList.contains('w-64')) {
                           sidebar.classList.remove('w-64');
-                          sidebar.classList.add('w-1');
+                          sidebar.classList.add('w-4');
                           main.classList.remove('lg:ml-64');
-                          main.classList.add('lg:ml-1');
-		    } else if (sidebar.classList.contains('w-1')) {
-                          sidebar.classList.remove('w-1');
+                          main.classList.add('lg:ml-4');
+		    } else if (sidebar.classList.contains('w-4')) {
+                          sidebar.classList.remove('w-4');
                           sidebar.classList.add('w-64');
-                          main.classList.remove('lg:ml-1');
+                          main.classList.remove('lg:ml-4');
                           main.classList.add('lg:ml-64');
 
 		    }
@@ -166,7 +166,7 @@
 >
 	<h4 class="sr-only">Main menu</h4>
 	<SidebarWrapper
-		divClass="overflow-y-auto px-3 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
+		divClass="overflow-y-auto px-2 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
 	>
 		<nav class="divide-y divide-gray-200 dark:divide-gray-700">
 			<SidebarGroup ulClass={groupClass} class="mb-3">
