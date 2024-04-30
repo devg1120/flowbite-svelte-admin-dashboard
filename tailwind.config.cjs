@@ -32,7 +32,7 @@ const config = {
                                 },
                                 
 
-                                gray: {  
+                                gray1: {  
                                           50:'#FFFFFF',
                                          100:'#FFFFFF',
                                          200:'#FFFFFF',

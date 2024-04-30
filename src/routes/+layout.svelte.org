@@ -7,7 +7,5 @@
 
 	onMount(modeobserver);
 </script>
-<!--
 <Runatics {analyticsId} />
--->
 <slot />
